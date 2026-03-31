@@ -4,7 +4,7 @@ on:
     branches: [main, feat/*]
     types: [opened, ready_for_review]
   push:
-    branches: [dev]
+    branches: [dev, dev-divesh]
   workflow_dispatch:
 
 permissions:

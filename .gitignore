@@ -19,3 +19,10 @@
 
 # Go workspace file
 go.work
+<<<<<<< HEAD
+=======
+go.work.sum
+
+# env file
+.env
+>>>>>>> a048ca7 (Initial commit)
