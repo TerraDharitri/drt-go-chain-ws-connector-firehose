@@ -1,7 +1,5 @@
 package process
 
-<<<<<<< HEAD
-=======
 import (
 	"io"
 
@@ -9,7 +7,6 @@ import (
 	"github.com/TerraDharitri/drt-go-chain-core/data/block"
 )
 
->>>>>>> 346a896 (test)
 // WSConnector defines a ws connector that receives incoming data and can be closed
 type WSConnector interface {
 	Close() error
@@ -27,8 +24,6 @@ type Logger interface {
 	Info(message string, args ...interface{})
 	IsInterfaceNil() bool
 }
-<<<<<<< HEAD
-=======
 
 // BlockContainerHandler defines a block creator container
 type BlockContainerHandler interface {
@@ -42,4 +37,3 @@ type Writer interface {
 	io.Writer
 	Close() error
 }
->>>>>>> 346a896 (test)

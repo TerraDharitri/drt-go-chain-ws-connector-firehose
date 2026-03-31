@@ -1,15 +1,6 @@
 package factory
 
 import (
-<<<<<<< HEAD
-	"github.com/TerraDharitri/drt-go-chain-communication/websocket/data"
-	factoryHost "github.com/TerraDharitri/drt-go-chain-communication/websocket/factory"
-	"github.com/TerraDharitri/drt-go-chain-core/marshal"
-	"github.com/TerraDharitri/drt-go-chain-core/marshal/factory"
-	logger "github.com/TerraDharitri/drt-go-chain-logger"
-	"github.com/TerraDharitri/drt-go-chain-ws-connector-template/config"
-	"github.com/TerraDharitri/drt-go-chain-ws-connector-template/process"
-=======
 	"os"
 
 	"github.com/TerraDharitri/drt-go-chain-communication/websocket/data"
@@ -22,7 +13,6 @@ import (
 
 	"github.com/TerraDharitri/drt-go-chain-ws-connector-firehose/config"
 	"github.com/TerraDharitri/drt-go-chain-ws-connector-firehose/process"
->>>>>>> 346a896 (test)
 )
 
 var log = logger.GetOrCreate("ws-connector")
@@ -35,9 +25,6 @@ func CreateWSConnector(cfg config.WebSocketConfig) (process.WSConnector, error) 
 		return nil, err
 	}
 
-<<<<<<< HEAD
-	dataProcessor, err := process.NewLogDataProcessor(marshaller, log)
-=======
 	blockContainer, err := createBlockContainer()
 	if err != nil {
 		return nil, err
@@ -48,7 +35,6 @@ func CreateWSConnector(cfg config.WebSocketConfig) (process.WSConnector, error) 
 		blockContainer,
 		&marshal.GogoProtoMarshalizer{}, // DO NOT CHANGE
 	)
->>>>>>> 346a896 (test)
 	if err != nil {
 		return nil, err
 	}
@@ -66,8 +52,6 @@ func CreateWSConnector(cfg config.WebSocketConfig) (process.WSConnector, error) 
 	return wsHost, nil
 }
 
-<<<<<<< HEAD
-=======
 func createBlockContainer() (process.BlockContainerHandler, error) {
 	container := block.NewEmptyBlockCreatorsContainer()
 
@@ -87,7 +71,6 @@ func createBlockContainer() (process.BlockContainerHandler, error) {
 	return container, nil
 }
 
->>>>>>> 346a896 (test)
 func createWsHost(wsMarshaller marshal.Marshalizer, cfg config.WebSocketConfig) (factoryHost.FullDuplexHost, error) {
 	return factoryHost.CreateWebSocketHost(factoryHost.ArgsWebSocketHost{
 		WebSocketConfig: data.WebSocketConfig{
@@ -96,13 +79,9 @@ func createWsHost(wsMarshaller marshal.Marshalizer, cfg config.WebSocketConfig) 
 			Mode:                       cfg.Mode,
 			RetryDurationInSec:         int(cfg.RetryDuration),
 			BlockingAckOnError:         cfg.BlockingAckOnError,
-<<<<<<< HEAD
-			DropMessagesIfNoConnection: false,
-=======
 			DropMessagesIfNoConnection: cfg.DropMessagesIfNoConnection,
 			AcknowledgeTimeoutInSec:    cfg.AcknowledgeTimeoutInSec,
 			Version:                    cfg.Version,
->>>>>>> 346a896 (test)
 		},
 		Marshaller: wsMarshaller,
 		Log:        log,

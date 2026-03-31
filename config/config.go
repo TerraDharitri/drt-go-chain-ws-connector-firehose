@@ -7,14 +7,6 @@ type Config struct {
 
 // WebSocketConfig holds web sockets config
 type WebSocketConfig struct {
-<<<<<<< HEAD
-	Url                string `toml:"url"`
-	MarshallerType     string `toml:"marshaller_type"`
-	Mode               string `toml:"mode"`
-	RetryDuration      uint32 `toml:"retry_duration"`
-	WithAcknowledge    bool   `toml:"with_acknowledge"`
-	BlockingAckOnError bool   `toml:"blocking_ack_on_error"`
-=======
 	Url                        string `toml:"url"`
 	MarshallerType             string `toml:"marshaller_type"`
 	Mode                       string `toml:"mode"`
@@ -24,5 +16,4 @@ type WebSocketConfig struct {
 	BlockingAckOnError         bool   `toml:"blocking_ack_on_error"`
 	DropMessagesIfNoConnection bool   `toml:"drop_messages_if_no_connection"` // Set to `true` to drop messages if there is no active WebSocket connection to send to.
 	Version                    uint32 `toml:"version"`                        // Defines the payload version.
->>>>>>> 346a896 (test)
 }

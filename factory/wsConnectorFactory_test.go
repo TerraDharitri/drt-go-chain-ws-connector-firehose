@@ -4,11 +4,7 @@ import (
 	"testing"
 
 	"github.com/TerraDharitri/drt-go-chain-communication/websocket/data"
-<<<<<<< HEAD
-	"github.com/TerraDharitri/drt-go-chain-ws-connector-template/config"
-=======
 	"github.com/TerraDharitri/drt-go-chain-ws-connector-firehose/config"
->>>>>>> 346a896 (test)
 	"github.com/stretchr/testify/require"
 )
 

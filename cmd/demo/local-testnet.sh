@@ -17,20 +17,12 @@ cloneDependencies(){
   mkdir "$TESTNET_DIR"
 
   git clone https://github.com/TerraDharitri/drt-go-chain "$TESTNET_DIR/drt-go-chain"
-<<<<<<< HEAD
-  checkoutStableVersion drt-go-chain cc39c2460f69e9db3e7970519f8474c8abbc294f
-=======
   checkoutStableVersion drt-go-chain 836c2624b0adc763d9f1edf8a5fbb724e01a19f2
->>>>>>> 346a896 (test)
 
   git clone https://github.com/TerraDharitri/drt-go-chain-deploy "$TESTNET_DIR/drt-go-chain-deploy"
 
   git clone https://github.com/TerraDharitri/drt-go-chain-proxy "$TESTNET_DIR/drt-go-chain-proxy"
-<<<<<<< HEAD
-  checkoutStableVersion drt-go-chain-proxy rc/v1.0.0
-=======
   checkoutStableVersion drt-go-chain-proxy main/v1.0.1
->>>>>>> 346a896 (test)
 }
 
 checkoutStableVersion(){
@@ -49,13 +41,8 @@ testnetSetup(){
   mkdir "$TESTNET_OUTPUT_DIR"
   cd "$TESTNET_OUTPUT_DIR"
   ln -s "$TESTNET_DIR"/drt-go-chain drt-go-chain
-<<<<<<< HEAD
-  ln -s "$TESTNET_DIR"/drt-go-chain-deploy drt-go-chain-deploy
-  ln -s "$TESTNET_DIR"/drt-go-chain-proxy drt-go-chain-proxy
-=======
   ln -s "$TESTNET_DIR"/drt-go-chain-deploy drt-go-chain-deploy-go
   ln -s "$TESTNET_DIR"/drt-go-chain-proxy drt-go-chain-proxy-go
->>>>>>> 346a896 (test)
 }
 
 testnetPrereq(){

@@ -6,7 +6,7 @@ import (
 
 	"github.com/TerraDharitri/drt-go-chain-core/core/check"
 	"github.com/TerraDharitri/drt-go-chain-core/data/outport"
-	"github.com/TerraDharitri/drt-go-chain-ws-connector-template/testscommon"
+	"github.com/TerraDharitri/drt-go-chain-ws-connector-firehose/testscommon"
 	"github.com/stretchr/testify/require"
 )
 

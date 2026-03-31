@@ -11,27 +11,18 @@ import (
 	"github.com/TerraDharitri/drt-go-chain-core/core/closing"
 	logger "github.com/TerraDharitri/drt-go-chain-logger"
 	"github.com/TerraDharitri/drt-go-chain-logger/file"
-<<<<<<< HEAD
-	"github.com/TerraDharitri/drt-go-chain-ws-connector-template/config"
-	"github.com/TerraDharitri/drt-go-chain-ws-connector-template/factory"
-=======
 	"github.com/TerraDharitri/drt-go-chain-ws-connector-firehose/config"
 	"github.com/TerraDharitri/drt-go-chain-ws-connector-firehose/factory"
->>>>>>> 346a896 (test)
 	"github.com/urfave/cli"
 )
 
-var log = logger.GetOrCreate("drt-go-chain-ws-connector-template")
+var log = logger.GetOrCreate("drt-go-chain-ws-connector-firehose")
 
 const (
 	configPath = "config/config.toml"
 
 	logsPath       = "logs"
-<<<<<<< HEAD
-	logFilePrefix  = "ws-connector-template"
-=======
 	logFilePrefix  = "ws-connector-firehose"
->>>>>>> 346a896 (test)
 	logLifeSpanSec = 432000 // 5 days
 	logLifeSpanMb  = 1024   // 1 GB
 )
@@ -84,11 +75,7 @@ func startConnector(ctx *cli.Context) error {
 
 	wsClient, err := factory.CreateWSConnector(cfg.WebSocketConfig)
 	if err != nil {
-<<<<<<< HEAD
-		return fmt.Errorf("cannot create ws connector, error: %w", err)
-=======
 		return fmt.Errorf("cannot create ws firehose connector, error: %w", err)
->>>>>>> 346a896 (test)
 	}
 
 	interrupt := make(chan os.Signal, 1)
