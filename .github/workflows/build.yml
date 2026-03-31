@@ -2,10 +2,17 @@ name: Build
 
 on:
   pull_request:
+<<<<<<< HEAD
     branches: [main, feat/*, dev]
     types: [opened, ready_for_review]
   push:
     branches: [dev]
+=======
+    branches: [main, feat/*]
+    types: [opened, ready_for_review]
+  push:
+    branches: [main, dev, feat/*]
+>>>>>>> 346a896 (test)
   workflow_dispatch:
 
 jobs:
@@ -18,5 +25,9 @@ jobs:
         uses: actions/setup-go@v3
         with:
           go-version: 1.23.6
+<<<<<<< HEAD
+=======
+
+>>>>>>> 346a896 (test)
       - name: Build
         run: go build -v ./...

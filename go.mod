@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 module github.com/TerraDharitri/drt-go-chain-ws-connector-template
+=======
+module github.com/TerraDharitri/drt-go-chain-ws-connector-firehose
+>>>>>>> 346a896 (test)
 
 go 1.23
 
@@ -7,7 +11,11 @@ require (
 	github.com/TerraDharitri/drt-go-chain-core v1.0.2
 	github.com/TerraDharitri/drt-go-chain-logger v1.0.0
 	github.com/stretchr/testify v1.10.0
+<<<<<<< HEAD
 	github.com/urfave/cli v1.22.13
+=======
+	github.com/urfave/cli v1.22.14
+>>>>>>> 346a896 (test)
 )
 
 require (

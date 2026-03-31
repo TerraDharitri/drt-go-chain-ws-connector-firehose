@@ -1,16 +1,27 @@
+<<<<<<< HEAD
 # drt-go-chain-ws-connector-template
+=======
+# drt-go-chain-ws-connector-firehose
+>>>>>>> 346a896 (test)
 
 ## Introduction
 
 In today's rapidly evolving blockchain ecosystem, the demand for real-time access to exported data from blockchain nodes
 has significantly increased. To meet this growing need within our expanding system, we have developed the Outport
+<<<<<<< HEAD
 Driver, a powerful websocket connection system specifically designed for the DharitrI blockchain.
 
 The Outport Driver acts as a crucial bridge between the DharitrI blockchain node and various services that rely on
+=======
+Driver, a powerful websocket connection system specifically designed for the Dharitri blockchain.
+
+The Outport Driver acts as a crucial bridge between the Dharitri blockchain node and various services that rely on
+>>>>>>> 346a896 (test)
 receiving up-to-date data from the node. By establishing a websocket connection, the Outport Driver enables seamless
 transmission of essential information, including blocks, validator details, account changes, and other processing
 results.
 
+<<<<<<< HEAD
 One of the key features of the DharitrI blockchain node is its flexible configuration file. By simply setting a flag
 to "true" within this file, the node can initiate the delivery of data via a websocket connection to any connected
 websocket client. This capability provides a reliable and efficient method for receiving live updates from the
@@ -30,15 +41,24 @@ services that will emerge as a result of this collaborative ecosystem.
 
 _Note: The Outport Driver is an open-source project, and we encourage active contributions and feedback from the
 community to further enhance its capabilities and compatibility with different blockchain networks._
+=======
+This repository utilizes the [ws connector template](https://github.com/TerraDharitri/drt-go-chain-ws-connector-firehose)
+to serve as a robust data provider for the firehose ingestion processor. It receives incoming data and seamlessly
+streams it to the standard output. The streamed data is appropriately prefixed with markers (such as `FIRE BLOCK BEGIN`)
+, enabling easy identification and integration with downstream systems.
+>>>>>>> 346a896 (test)
 
 ## How to use
 
 ### Use cases
 
+<<<<<<< HEAD
 The Outport Driver operates on a robust websocket connection architecture, supporting both server and client roles. The
 system is designed to seamlessly export data from the DharitrI blockchain node, which adopts a sharded architecture
 where each shard represents a separate running chain, interconnected by the meta chain.
 
+=======
+>>>>>>> 346a896 (test)
 To export data from a specific shard, you need to enable an observer node within that shard to export data. One can do
 that
 by enabling the **[HostDriverConfig].Enabled** flag to true
@@ -49,12 +69,17 @@ binaries, each responsible for receiving data from its respective shard. This di
 integrity and allows for shard-specific data processing.
 
 However, the websocket connection in the Outport Driver is highly flexible and parameterizable. By customizing the
+<<<<<<< HEAD
 configuration, you can configure the observer nodes to function as clients and the driver (this template binary) as a
+=======
+configuration, you can configure the observer nodes to function as clients and the ws firehose connector as a
+>>>>>>> 346a896 (test)
 server. This configuration reduces the number of driver receiver binaries to just one, acting as a server that receives
 data from each observer, from each shard. To set your receiver as a server, you need set **mode**
 from `cmd/connector/config/config.toml` to **"server"**.
 
 Alternatively, you have the option to set up the observer node as a server capable of handling multiple clients. This
+<<<<<<< HEAD
 setup proves advantageous when multiple services within your ecosystem need to receive exported data. For instance, a
 single node could export data to various services, such as an elastic indexer, a monitoring tool, a notifier, or other
 implementations.
@@ -63,6 +88,9 @@ By tailoring the configuration of the observer nodes and the driver (this templa
 requirements, you can effectively streamline and centralize the reception of data from the DharitrI blockchain node.
 This flexibility empowers you to design a data distribution strategy that aligns with your ecosystem's needs while
 ensuring efficient and reliable data transmission.
+=======
+setup proves advantageous when multiple services within your ecosystem need to receive exported data.
+>>>>>>> 346a896 (test)
 
 ### Illustration
 
@@ -104,6 +132,7 @@ ensuring efficient and reliable data transmission.
         +----------------+   +-------------------+
 ```
 
+<<<<<<< HEAD
 ### Start building
 
 Once you have an observer node running and configured to export data (either server or client) you can test your
@@ -137,3 +166,9 @@ receiver.
 
 _If you want to test the ws receiver within a local setup testnet environment, you can use the provided demo
 within [demo directory](cmd/demo)._
+=======
+### Example
+
+If you want to test the firehose ws receiver within a local setup testnet environment, you can use the provided demo
+within [demo directory](cmd/demo).
+>>>>>>> 346a896 (test)
